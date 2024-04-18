@@ -1,0 +1,77 @@
+    <div class="change-font text-white pl-5 pr-5 pt-5">
+        <h1>Historia y Trama</h1>
+        <div>
+            <p>La Historia de The Witcher está llena de emocionantes momentos y adversidades. 
+                Recuerda, no existe el bien y el mal, solo las decisiones y consecuencias.
+            </p>
+        </div>
+    </div>
+
+    <!-- Botones con informacion colapsada -->
+    <!-- Informacion colapsada de The Witcher 1 -->
+    <p class="change-font text-center">
+        <button
+            type="button"
+            class="btn btn btn-outline-light mr-2" 
+            (click)="changeHistoria(1)"
+            [attr.aria-expanded]="!isCollapsed"
+            aria-controls="collapse1"
+            [id] = "1"
+        >
+            The Witcher
+        </button>
+
+    <!-- Informacion colapsada de The Witcher 2 -->
+        <button
+            type="button"
+            class="btn btn btn-outline-light mr-2"
+            (click)="changeHistoria(2)"
+            [attr.aria-expanded]="!isCollapsed"
+            aria-controls="collapse2"
+            [id] = "2"
+        >
+            The Witcher 2 Assassins of Kings
+        </button>
+
+    <!-- Informacion colapsada de The Witcher 3 -->
+        <button
+            type="button"
+            class="btn btn-outline-light mr-2"
+            (click)="changeHistoria(3)"
+            [attr.aria-expanded]="!isCollapsed"
+            aria-controls="collapse3"
+            [id] = "3"
+        >
+            The Witcher 3 Wild Hunt
+        </button>
+
+    <!-- Informacion colapsada de Thronebreaker -->
+        <button
+            
+            type="button"
+            class="btn btn-outline-light"
+            (click)="changeHistoria(4)"
+            [attr.aria-expanded]="!isCollapsed"
+            aria-controls="collapse4"
+            [id] = "4"
+        >
+            Thronebreaker: The Witcher Tales
+        </button>
+    </p>
+
+<!-- Muestra la información dependiendo del botón seleccionado -->
+    <div>
+        <div class="card">
+            <div class="card-body change-font text-white ml-4">
+                <img [src]="images[selectedImage]" alt="" class="img-game-cover">
+                <!-- <p class="text-white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci nesciunt molestias quibusdam minima quidem, aliquid nostrum repudiandae ex labore iusto maxime necessitatibus quas nisi id eos, nulla perspiciatis autem ametd.</p> -->
+                <div *ngIf="historia" class="info">
+                    <h2>{{ historia.titulo }}</h2>
+                    <p>{{ historia.resumen }}</p>
+                    <p>{{ historia.eventosClave }}</p>
+                    <p>{{ historia.DecisionesImportantes }}</p>
+                    <!-- Mostrar otros detalles de la historia aquí -->
+                </div>
+            </div>
+        </div>
+    </div>

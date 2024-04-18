@@ -1,0 +1,21 @@
+.card {
+    background-color: transparent;
+}
+
+.img-game-cover {
+    width: 34%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    float: left; /* Alinea la imagen a la izquierda */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+  }
+
+.info {
+    margin-left: 30px;
+}
+
+
+

@@ -1,0 +1,33 @@
+<div class="change-font text-white pl-5 pr-5 pt-5">
+    <h1>Personajes</h1>
+    <div>
+        <p>La saga de videojuegos de The Witcher está llena de personajes memorables y fascinantes. 
+            Aquí tienes la descripción general de algunos de los protagonistas principales
+        </p>
+    </div>
+</div>
+
+<!-- <div *ngFor="let personaje of personajes">
+    <p>{{ personaje.nombre }} - {{ personaje.descripcion }}</p>
+</div> -->
+  
+<!-- Carrusel de personajes -->
+@if (images) {
+<div class="carrusel change-font">
+    <ngb-carousel>
+      <ng-template ngbSlide *ngFor="let personaje of personajes; let i = index ">
+        <div class="picsum-img-wrapper encuadre-img ml-auto">
+            <img [src]="images[i]" alt="Imagenes personajes" />
+        </div>
+        <div class="blur-text carousel-caption change-font-shadow">
+          <h3>{{ personaje.nombre }}</h3>
+          <p>{{ personaje.descripcion }}</p>
+          <p>Poderes: {{ personaje.habilidades }}</p>
+          <p>Relaciones cercanas: {{ personaje.relaciones }}</p>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+}
+
+

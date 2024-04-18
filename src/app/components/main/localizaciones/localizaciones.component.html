@@ -1,0 +1,27 @@
+    <div class="change-font text-white pl-5 pr-5 pt-5">
+        <h1>Localizaciones</h1>
+        <div>
+            <p>Lugares mágicos y misteriosos que te harán sentir parte de la historia. 
+                Explora cada rincón y descubre los secretos que esconden.
+            </p>
+        </div>
+    </div>
+
+<!-- Carrusel de localizaciones -->
+<!-- Carrusel de personajes -->
+@if (images) {
+    <div class="carrusel change-font">
+        <ngb-carousel>
+          <ng-template ngbSlide *ngFor="let localizacion of localizaciones; let i = index ">
+            <div class="picsum-img-wrapper encuadre-img ml-auto">
+                <img [src]="images[i]" alt="Imagenes personajes" />
+            </div>
+            <div class="blur-text carousel-caption change-font-shadow">
+              <h3>{{ localizacion.nombre }}</h3>
+              <p>{{ localizacion.descripcion }}</p>
+              <p>{{ localizacion.reino }}</p>
+            </div>
+          </ng-template>
+        </ngb-carousel>
+      </div>
+    }

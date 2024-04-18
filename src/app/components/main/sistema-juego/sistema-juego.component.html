@@ -1,0 +1,100 @@
+<div class="change-font text-white pl-5 pr-5 pt-5">
+    <h1>Sistema de juego</h1>
+    <div>
+        <p> 
+            Dentro de toda la saga las mecánicas de juego son muy similares, pero cada entrega tiene sus propias características. 
+            Aquí encontrás algunos de los sistemas más populares implementados dentro de la saga.
+        </p>
+    </div>
+</div>
+
+<!-- Botones con informacion colapsada -->
+<!-- Informacion colapsada del combate -->
+<p class="change-font text-center">
+    <button
+        type="button"
+        class="btn btn btn-outline-light mr-2" 
+        (click)="changeSistema(1)"
+        [attr.aria-expanded]="!isCollapsed"
+        aria-controls="collapseExample"
+        [id] = "1"
+    >
+        Combate
+    </button>
+
+<!-- Informacion colapsada Exploración -->
+    <button
+        type="button"
+        class="btn btn btn-outline-light mr-2"
+        (click)="changeSistema(2)"
+        [attr.aria-expanded]="!isCollapsed"
+        aria-controls="collapseExample"
+        [id] = "2"
+    >
+        Exploración
+    </button>
+
+<!-- Informacion colapsada de Narrativa -->
+    <button
+        type="button"
+        class="btn btn-outline-light mr-2"
+        (click)="changeSistema(3)"
+        [attr.aria-expanded]="!isCollapsed"
+        aria-controls="collapseExample"
+        [id] = "3"
+    >
+        Narrativa
+    </button>
+
+<!-- Informacion colapsada de Artesanía -->
+    <button
+        
+        type="button"
+        class="btn btn-outline-light mr-2"
+        (click)="changeSistema(4)"
+        [attr.aria-expanded]="!isCollapsed"
+        aria-controls="collapseExample"
+        [id] = "4"
+    >
+        Artesanía
+    </button>
+
+    <!-- Informacion colapsada de Interacciones -->
+    <button
+        
+        type="button"
+        class="btn btn-outline-light mr-2"
+        (click)="changeSistema(5)"
+        [attr.aria-expanded]="!isCollapsed"
+        aria-controls="collapseExample"
+        [id] = "5"
+    >
+        Interacciones
+    </button>
+
+    <!-- Informacion colapsada de Misiones -->
+    <button
+        
+        type="button"
+        class="btn btn-outline-light"
+        (click)="changeSistema(6)"
+        [attr.aria-expanded]="!isCollapsed"
+        aria-controls="collapseExample"
+        [id] = "6"
+    >
+        Misiones
+    </button>
+</p>
+
+<!-- Muestra la información dependiendo del botón seleccionado -->
+<div>
+    <div class="card">
+        <div class="card-body change-font text-white ml-4">
+            <div *ngIf="sistema" class="info">
+            <img [src]="images[selectedImage]" alt="" class="img-game-cover">
+                <h2>{{ sistema.tipo }}</h2>
+                <p>{{ sistema.descripcion }}</p>
+            </div>
+        </div>
+    </div>
+</div>

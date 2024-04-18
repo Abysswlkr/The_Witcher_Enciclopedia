@@ -1,0 +1,29 @@
+<div class="change-font text-white pl-5 pr-5 pt-5">
+    <h1>Arte y diseño</h1>
+    <div>
+        <p> 
+            El arte y el diseño son dos disciplinas que se complementan y se nutren mutuamente. El arte es una forma de expresión que busca transmitir emociones y sentimientos, 
+            mientras que el diseño es una disciplina más técnica y funcional que busca resolver problemas y satisfacer necesidades. 
+            Sin embargo, ambos comparten un objetivo común: comunicar un mensaje de forma efectiva y estética. En esta sección encontrarás 
+            información sobre diferentes corrientes artísticas, movimientos de diseño y artistas y diseñadores destacados. ¡Esperamos que disfrutes de tu visita!
+        </p>
+    </div>
+
+    <div ngbAccordion [closeOthers]="true">
+        @for (item of items$; track item) {
+            <div ngbAccordionItem>
+                <h2 ngbAccordionHeader>
+                    <button ngbAccordionButton>{{ item.tipoArte }}</button>
+                </h2>
+                <div ngbAccordionCollapse>
+                    <div ngbAccordionBody>
+                        <ng-template>
+                            {{ item.detalles }}
+                        </ng-template>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

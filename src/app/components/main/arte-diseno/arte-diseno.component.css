@@ -1,0 +1,20 @@
+/* Establece el fondo del acordeón como transparente */
+ngbAccordion {
+    background-color: transparent;
+}
+
+/* Establece el fondo de los elementos del acordeón como transparente */
+ngbAccordionItem {
+    background-color: transparent;
+}
+
+/* Establece el color del texto en los elementos del acordeón */
+.ngb-accordion-button {
+    color: #333; /* Puedes ajustar el color según tus preferencias */
+}
+
+/* Establece el estilo de los bordes y la sombra (opcional) */
+.ngb-accordion-item {
+    border: 1px solid #ccc; /* Borde opcional */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+}

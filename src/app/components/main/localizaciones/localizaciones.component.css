@@ -1,0 +1,12 @@
+img {
+    width: 1280px;
+    height: 720px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.blur-text {
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+}
